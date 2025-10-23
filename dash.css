@@ -1,0 +1,425 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body & Layout */
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin: 5px 0;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.main-content h1,
+.main-content h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Forms */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #000;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+form button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+form button:hover {
+  background-color: #333333;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+table td {
+  background-color: #f9f9f9;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  color: #000000;
+}
+
+.close-btn,
+.close-edit {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000000;
+}
+
+/* Delete Modal */
+#delete-modal div {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+#delete-modal button {
+  margin: 10px;
+}
+
+/* Section Display */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+
+.inventory-table button {
+  padding: 10px 16px;
+  border: 2px solid black;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 6px;
+}
+
+.inventory-table button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Optional: Make the buttons flex nicely in the actions column */
+td:last-child {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Modal Buttons */
+#delete-modal button,
+#edit-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Specific Styles */
+#delete-yes {
+  background-color: #e53935; /* Red */
+  color: white;
+}
+#delete-yes:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+#delete-no {
+  background-color: #9e9e9e; /* Gray */
+  color: white;
+}
+#delete-no:hover {
+  background-color: #757575;
+  transform: scale(1.05);
+}
+
+#edit-form button[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+#edit-form button[type="submit"]:hover {
+  background-color: #388E3C;
+  transform: scale(1.05);
+}
+
+
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Custom upload button */
+.custom-file-upload {
+  display: inline-block;
+  padding: 8px 20px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.custom-file-upload:hover {
+  background-color: #0d47a1;
+}
+
+/* Container for upload and filename */
+.upload-container {
+  margin: 10px 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Thumbnail preview */
+.upload-preview {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  display: none; /* hidden initially */
+}
+
+/* --- Your existing dash.css contents should go here or be linked externally --- */
+
+      /* Hide default file input */
+
+        #transactions-table button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  #transactions-table button + button {
+    background-color: #f44336;
+  }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      /* Custom upload button */
+      .custom-file-upload {
+        display: inline-block;
+        padding: 8px 20px;
+        cursor: pointer;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        user-select: none;
+      }
+
+      .custom-file-upload:hover {
+        background-color: #0d47a1;
+      }
+
+      /* Container for upload button, filename, and preview */
+      .upload-container {
+        margin: 10px 0 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: Arial, sans-serif;
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      /* Thumbnail preview */
+      .upload-preview {
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        display: none;
+      }
+
+  button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Specific button styles */
+    .approve-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .approve-btn:hover {
+      background-color: #218838;
+    }
+
+    .decline-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .decline-btn:hover {
+      background-color: #c82333;
+    }
+
+    .add-stock-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .add-stock-btn:hover {
+      background-color: #0069d9;
+    }
+
+    #save-stock-btn {
+      background-color: #17a2b8;
+      color: white;
+    }
+
+    #save-stock-btn:hover {
+      background-color: #138496;
+    }
+
+    #cancel-stock-btn {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    #cancel-stock-btn:hover {
+      background-color: #5a6268;
+    }
+
+    /* New: Edit and Delete buttons */
+    .edit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+
+    /* Disabled button style */
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }

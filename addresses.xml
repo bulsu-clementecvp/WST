@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addresses>
+  <address>
+    <username>Charles</username>
+    <house_no>123</house_no>
+    <street>Purok 3 </street>
+    <brgy>Iba Este</brgy>
+    <city>Calumpit</city>
+    <province>Bulacan</province>
+    <country>Philippines</country>
+    <postal_code>3003</postal_code>
+    <added_on>2025-05-24 16:39:38</added_on>
+  </address>
+  <address>
+    <username>Centt</username>
+    <house_no>123</house_no>
+    <street>Purok 3</street>
+    <brgy>Iba Este</brgy>
+    <city>Calumpit</city>
+    <province>Bulacan</province>
+    <country>Philippines</country>
+    <postal_code>3003</postal_code>
+    <added_on>2025-05-26 05:35:29</added_on>
+  </address>
+</addresses>
